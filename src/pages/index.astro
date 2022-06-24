@@ -1,0 +1,42 @@
+---
+import Icon from '../components/Icon.astro';
+import ThemeToggle from '../components/ThemeToggle';
+import Sidebar from '../components/Sidebar';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="/main.css">
+	</head>
+
+	<body>
+		<Sidebar client:idle>
+			<Icon slot="menu" name="menu" />
+			<Icon slot="close" name="close" />
+			<nav>
+				<ul>
+					<li>Home</li>
+					<li>Page A</li>
+					<li>Page B</li>
+				</ul>
+			</nav>
+
+			<ThemeToggle client:idle slot="toggle">
+				<Icon slot="light" name="sun" />
+				<Icon slot="dark" name="moon" />
+			</ThemeToggle>
+		</Sidebar>
+
+		<main>
+			<h1>Hello Astro!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nulla eget odio ultrices gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam nec erat volutpat, accumsan purus quis, auctor nunc. Donec faucibus, lacus ut blandit porta, ex purus rutrum est, in lobortis felis massa sed augue. Ut sed lacus leo. Donec tincidunt feugiat nibh, non efficitur arcu varius non. Donec maximus venenatis libero, id ullamcorper tortor blandit at. Ut metus mi, finibus sit amet maximus id, varius vitae ex. Morbi tempus arcu sit amet nisi placerat, ac convallis nunc sodales. Aenean dapibus quis lorem id gravida. Aenean a dolor ac lorem lacinia congue.</p>
+			<p>Nullam luctus sapien nulla. Duis non eleifend turpis. Nunc faucibus nunc dui. Praesent et ullamcorper neque. Quisque convallis vestibulum pretium. Curabitur elementum velit ut vulputate venenatis. Donec sed mauris ultricies, aliquet nisl non, ullamcorper ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi enim nunc, porta a augue vel, condimentum vestibulum metus. Mauris ullamcorper sed lacus id volutpat. Donec fermentum tempor elit. Ut sed sapien ultrices, gravida augue in, tincidunt libero. Donec accumsan finibus arcu, nec viverra magna finibus nec. Mauris eget ante bibendum, placerat elit eu, molestie dolor. Morbi sed elit fermentum, hendrerit massa et, cursus tellus.</p>
+			<p>Donec vitae tellus pulvinar, faucibus orci ut, dictum turpis. Donec in metus vel felis pulvinar tincidunt a ut nulla. Cras ipsum mi, dictum et congue a, vehicula non massa. Fusce ultricies mi ligula, a consectetur turpis vulputate tincidunt. Nullam velit ligula, pharetra vitae egestas non, tincidunt sit amet justo. Pellentesque porttitor tincidunt orci non hendrerit. Donec eget ante urna.</p>
+			<p>Ut nulla nunc, interdum quis vestibulum at, molestie rutrum urna. Maecenas varius nisi id nulla volutpat consectetur a vitae justo. Proin ac fermentum nibh. Sed eget quam ut orci dictum ultrices at ut tellus. Pellentesque aliquam semper feugiat. Nam convallis urna non velit tristique rutrum. Donec nisi ligula, tristique non eros eu, fermentum condimentum enim. Aenean ut augue nec ante condimentum dapibus convallis ac turpis. Vestibulum ac sem id est hendrerit condimentum a nec tellus. Suspendisse porta aliquam lectus, quis vestibulum velit aliquet vitae. Morbi id facilisis lectus. Maecenas porta sollicitudin diam mattis ultricies. Nulla nec nulla id nibh finibus dapibus vitae placerat arcu. Morbi viverra egestas justo id molestie.</p>
+		</main>
+
+	</body>
+</html>
